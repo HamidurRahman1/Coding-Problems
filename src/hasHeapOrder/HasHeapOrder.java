@@ -7,7 +7,7 @@
 package hasHeapOrder;
 
 import java.util.List;
-//import ds.array.heap.Heap;
+import ds.array.heap.Heap;
 
 public class HasHeapOrder
 {
@@ -25,15 +25,15 @@ public class HasHeapOrder
         System.out.println(heap);
         System.out.println(hasHeapOrder(heap.copy()));
     }
-    
+
     private static <T extends Comparable<T>> boolean hasHeapOrder(List <T> list)
     {
         if(list.size() < 2) return true;
-        
+
         int parent = 0;
         int leftChild = 2 * parent + 1;
         int rightChild = 2 * parent + 2;
-        
+
         while(leftChild < list.size())
         {
             if(list.get(parent).compareTo(list.get(leftChild)) > 0)
@@ -47,12 +47,12 @@ public class HasHeapOrder
                     return false;
                 }
             }
-            
+
             parent++;
             leftChild = 2 * parent + 1;
             rightChild = 2 * parent + 2;
         }
-        
+
         return true;
     }
 }
