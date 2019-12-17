@@ -1,3 +1,9 @@
+
+/*
+    Problem: https://www.hackerrank.com/challenges/array-left-rotation/problem
+ */
+
+
 package nLeftRotation;
 
 public class NLeftRotation
